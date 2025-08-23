@@ -637,7 +637,7 @@ This helps us cover processing costs and ensures fair attention to every applica
       const PAYMENT_API_AIRTEL = BACKEND_BASE_URL + '/api/pay/airtel';
       const PAYMENT_API_CARD = BACKEND_BASE_URL + '/api/pay/card';
       // Do NOT expose provider keys in the frontend
-      const FORM_ENDPOINT = BACKEND_BASE_URL + '/api/job-applications';
+      const FORM_ENDPOINT = BACKEND_BASE_URL + '/api/client-requests';
       const REGISTRATION_AMOUNT_RWF = 5000;
 
       const form = document.querySelector('form');
@@ -690,7 +690,7 @@ This helps us cover processing costs and ensures fair attention to every applica
       async function processPayment(method, amount) {
         const url = getPaymentEndpoint(method);
         if (!url) throw new Error('Select a payment method.');
-        const payload = { purpose: 'job' };
+        const payload = { purpose: 'client' };
         if (method === 'mtn' || method === 'airtel') {
           const phone = (document.getElementById('pmPhone') || {}).value || '';
           if (!phone) throw new Error('Enter a valid mobile number.');
