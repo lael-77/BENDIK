@@ -17,9 +17,9 @@ const ITEC_AIRTEL_API_KEY = process.env.ITEC_AIRTEL_API_KEY || '';
 const ITEC_CARD_API_KEY = process.env.ITEC_CARD_API_KEY || '';
 
 // Base URLs for each payment method
-const ITEC_MTN_BASE_URL = process.env.ITEC_MTN_BASE_URL || 'https://api.itecpay.com';
-const ITEC_AIRTEL_BASE_URL = process.env.ITEC_AIRTEL_BASE_URL || 'https://api.itecpay.com';
-const ITEC_CARD_BASE_URL = process.env.ITEC_CARD_BASE_URL || 'https://api.itecpay.com';
+const ITEC_MTN_BASE_URL = process.env.ITEC_MTN_BASE_URL || 'https://pay.itecpay.rw/api/pay';
+const ITEC_AIRTEL_BASE_URL = process.env.ITEC_AIRTEL_BASE_URL || 'https://pay.itecpay.rw/api/pay';
+const ITEC_CARD_BASE_URL = process.env.ITEC_CARD_BASE_URL || 'https://pay.itecpay.rw/api/pay';
 
 // Mock mode for testing (set to true to simulate payments)
 const MOCK_PAYMENT_MODE = process.env.MOCK_PAYMENT_MODE === 'true' || !ITEC_MTN_API_KEY;
